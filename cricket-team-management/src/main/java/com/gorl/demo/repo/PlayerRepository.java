@@ -1,0 +1,11 @@
+package com.gorl.demo.repo;
+
+import com.gorl.demo.entity.Player;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PlayerRepository extends JpaRepository<Player, Long> {
+
+    boolean existsByJerseyNumber(Integer jerseyNumber);
+}
